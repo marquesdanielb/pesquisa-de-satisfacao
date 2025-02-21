@@ -11,25 +11,25 @@ try {
     die('Falha na conexão: ' . $e->getMessage());
 }
 
-// if (array_key_exists('name', $_POST)) {
-//     $nome = $_POST['name'];
-// }
+if (array_key_exists('name', $_POST)) {
+    $nome = $_POST['name'];
+}
 
-// if (array_key_exists('primeira-vez-sim', $_POST)) {
-//     if (!$_POST['primeira-vez-sim']) {
-//         $primeira_vez_sim = 'nao';
-//     } else {
-//         $primeira_vez_sim = 'sim';
-//     }
-// }
+if (array_key_exists('primeira-vez-sim', $_POST)) {
+    if (!$_POST['primeira-vez-sim']) {
+        $primeira_vez_sim = 'nao';
+    } else {
+        $primeira_vez_sim = 'sim';
+    }
+}
 
-// if (array_key_exists('houve-processo', $_POST)) {
-//     if (!$_POST['houve-processo']) {
-//         $houve_processo = 'nao';
-//     } else {
-//         $houve_processo = 'sim';
-//     }
-// }
+if (array_key_exists('houve-processo', $_POST)) {
+    if (!$_POST['houve-processo']) {
+        $houve_processo = 'nao';
+    } else {
+        $houve_processo = 'sim';
+    }
+}
 
 // Inserção dos dados usando PDO
 $sql = "INSERT INTO respostas (nome, documento, primeira_vez, servicos_realizados, simpatia, clareza, tempo_espera, resolucao, descricao_resolucao, houve_processo, descricao_processo, resolucao_processo, sugestao, atendente) VALUES (:nome, :documento, :primeira_vez, :servicos_realizados, :simpatia, :clareza, :tempo_espera, :resolucao, :descricao_resolucao, :houve_processo, :descricao_processo, :resolucao_processo, :sugestao, :atendente)";
